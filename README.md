@@ -13,16 +13,7 @@ npm install --save use-backdrop
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'use-backdrop'
-import 'use-backdrop/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+To be made! If you really need to use it now, read my source code.
 ```
 
 ## License
