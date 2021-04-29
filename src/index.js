@@ -13,7 +13,7 @@ export function BackdropProvider({
   disableDarken,
   backdropSurface
 }) {
-  const backdropSurfaceStyle = {
+  const defaultBackdropSurface = {
     position: 'fixed',
     top: 0,
     left: 0,
@@ -28,20 +28,17 @@ export function BackdropProvider({
     render: null
   })
 
-  const closeBackdrop = () => {
+  const closeBackdrop = () =>
     setBackdrop({
       open: false,
       render: null
     })
-    document.body.style.overflow = 'initial'
-  }
 
   const displayBackdrop = (nextBackdrop) => {
     setBackdrop({
       open: true,
       render: nextBackdrop
     })
-    document.body.style.overflow = 'hidden'
   }
 
   return (
@@ -56,7 +53,7 @@ export function BackdropProvider({
         (backdropSurface ? (
           backdropSurface(backdrop.render(closeBackdrop))
         ) : (
-          <div style={backdropSurfaceStyle}>
+          <div style={defaultBackdropSurface}>
             {backdrop.render(closeBackdrop)}
           </div>
         ))}

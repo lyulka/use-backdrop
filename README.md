@@ -1,8 +1,16 @@
 # use-backdrop
+<h1 style="text-align: center;">use-backdrop</h1>
 
-> React Hooks API for quickly displaying full-screen backdrops/overlays
+React Hooks API for quickly displaying customizable full-screen backdrops/overlays.
+
+Think of use-backdrop as `alert()`, but native to React, and endlessly customizable!
 
 [![NPM](https://img.shields.io/npm/v/use-backdrop.svg)](https://www.npmjs.com/package/use-backdrop) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+### use-backdrop is ready for production
+
+![gif of use-backdrop](https://adrio-misc-images.s3-ap-southeast-1.amazonaws.com/use-backdrop-demo-compressed.gif)
+source: digital-transaction.com/parallelchain
 
 ## Install
 
@@ -10,10 +18,52 @@
 npm install --save use-backdrop
 ```
 
-## Usage
+### Step 1: Wrap BackdropProvider around your root (App) component
 
 ```jsx
-To be made! If you really need to use it now, read my source code.
+import { BackdropProvider } from 'use-backdrop';
+ 
+return (
+  <BackdropProvider>
+    <div className="App">
+      { /* The rest of your app. */ }
+    </div>
+  </BackdropProvider>
+)
+```
+
+### Step 2: Import and call the useBackdrop hook
+
+```jsx
+import { useBackdrop } from 'use-backdrop';
+ 
+export default function MyComponent() {
+  const { displayBackdrop, closeBackdrop } = useBackdrop();
+}
+```
+
+
+### Step 3: Call displayBackdrop, passing in a render function
+```jsx
+export default function MyComponent() {
+  const { displayBackdrop } = useBackdrop();
+ 
+  const handleClick = () => displayBackdrop((closeBackdrop) => (
+    <div>
+      <button onClick={closeBackdrop}>
+        Click me to close the backdrop.
+      </button>
+    </div>
+  ));
+ 
+  return (
+    <div>
+      <button onClick={handleClick}>
+        Click me to display a backdrop.
+      </button>
+    </div>
+  )
+}
 ```
 
 ## License
