@@ -1,6 +1,3 @@
-# use-backdrop
-<h1 style="text-align: center;">use-backdrop</h1>
-
 React Hooks API for quickly displaying customizable full-screen backdrops/overlays.
 
 Think of use-backdrop as `alert()`, but native to React, and endlessly customizable!
