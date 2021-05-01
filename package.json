@@ -1,6 +1,6 @@
 {
   "name": "use-backdrop",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "React Hooks API for quickly displaying full-screen backdrops/overlays",
   "license": "MIT",
   "main": "dist/index.js",
@@ -22,7 +22,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": ">=17.0.0"
+    "react": ">=15.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",

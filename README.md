@@ -6,7 +6,7 @@ Think of use-backdrop as `alert()`, but native to React, and endlessly customiza
 
 ### use-backdrop is ready for production
 
-![gif of use-backdrop](https://adrio-misc-images.s3-ap-southeast-1.amazonaws.com/use-backdrop-demo-compressed.gif)
+![gif of use-backdrop](https://raw.githubusercontent.com/lyulka/use-backdrop/master/use-backdrop-demo-compressed.gif)
 
 ## Install
 
