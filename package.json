@@ -1,6 +1,6 @@
 {
   "name": "use-backdrop",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "React Hooks API for quickly displaying full-screen backdrops/overlays",
   "license": "MIT",
   "main": "dist/index.js",
@@ -8,6 +8,10 @@
   "source": "src/index.js",
   "engines": {
     "node": ">=10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyulka/use-backdrop.git"
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
