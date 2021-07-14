@@ -14,6 +14,8 @@ Think of use-backdrop as `alert()`, but native to React, and endlessly customiza
 npm install --save use-backdrop
 ```
 
+An minimal example that uses `use-backdrop` to display a modal is available on Github.
+
 ### Step 1: Wrap BackdropProvider around your root (App) component
 
 ```jsx

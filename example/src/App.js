@@ -1,10 +1,12 @@
 import React from 'react'
+import { BackdropProvider } from 'use-backdrop';
 
-import { ExampleComponent } from 'use-backdrop'
-import 'use-backdrop/dist/index.css'
+import ExampleComponent from './ExampleComponent'
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+const App = () => (
+  <BackdropProvider>
+    <ExampleComponent />
+  </BackdropProvider>
+)
 
 export default App
