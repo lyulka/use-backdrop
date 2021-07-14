@@ -4,7 +4,7 @@ Think of use-backdrop as `alert()`, but native to React, and endlessly customiza
 
 [![NPM](https://img.shields.io/npm/v/use-backdrop.svg)](https://www.npmjs.com/package/use-backdrop) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-### use-backdrop is ready for production
+### use-backdrop is ready for production apps 😘
 
 ![gif of use-backdrop](https://raw.githubusercontent.com/lyulka/use-backdrop/master/use-backdrop-demo-compressed.gif)
 
@@ -16,33 +16,7 @@ npm install --save use-backdrop
 
 ## Usage
 
-An minimal example that uses `use-backdrop` to display a modal is available on Github.
-
-### BackdropProvider props
-
-```js
-BackdropProvider.propTypes = {
-  children: PropTypes.element,
-
-  // zIndex of the backdrop surface. Unused if backdropSurface is
-  // overridden.
-  zIndex: PropTypes.number,
-
-  // If true, backdrop background is transparent.
-  disableDarken: PropTypes.bool,
-
-  // A render function that overrides (takes the place of) the default
-  // darkened full-page div background.
-  backdropSurface: PropTypes.func
-}
-
-BackdropProvider.defaultProps = {
-  children: null,
-  disableBackdrop: false,
-  zIndex: 10,
-  backdropSurface: null
-}
-```
+🎉 A no-fuss example that uses `use-backdrop` to display a modal is available on [GitHub](https://github.com/lyulka/use-backdrop). 🎉
 
 ### Step 1: Wrap BackdropProvider around your root (App) component
 
@@ -89,6 +63,35 @@ export default function MyComponent() {
       </button>
     </div>
   )
+}
+```
+
+### BackdropProvider props & options
+
+```js
+BackdropProvider.propTypes = {
+  children: PropTypes.element,
+
+  // zIndex of the backdrop surface. Unused if backdropSurface is
+  // overridden.
+  zIndex: PropTypes.number,
+
+  // If true, backdrop background is transparent.
+  disableDarken: PropTypes.bool,
+
+  // A render function: (children) => (/* React Component */)
+  // that returns a Component that overrides (takes the place of)
+  // the default darkened div background.
+  //
+  // See /example/src/ExampleApp.jsx for proper use.
+  backdropSurface: PropTypes.func
+}
+
+BackdropProvider.defaultProps = {
+  children: null,
+  disableBackdrop: false,
+  zIndex: 10,
+  backdropSurface: null
 }
 ```
 

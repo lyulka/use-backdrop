@@ -4,7 +4,7 @@ import { useBackdrop } from 'use-backdrop';
 export default function ExampleComponent() {
   const { displayBackdrop } = useBackdrop();
 
-  const ModalBackdrop = (closeBackdrop) => (
+  const Modal = (closeBackdrop) => (
     <div style={{
       display: 'flex',
       justifyContent: 'center',
@@ -25,7 +25,7 @@ export default function ExampleComponent() {
 
   return (
     <div>
-      <button onClick={() => displayBackdrop(ModalBackdrop)}>
+      <button onClick={() => displayBackdrop(Modal)}>
         Open backdrop
       </button>
     </div>

@@ -28,16 +28,17 @@ export function BackdropProvider({
     render: null
   })
 
-  const closeBackdrop = () =>
-    setBackdrop({
-      open: false,
-      render: null
-    })
-
   const displayBackdrop = (nextBackdrop) => {
     setBackdrop({
       open: true,
       render: nextBackdrop
+    })
+  }
+
+  const closeBackdrop = () => {
+    setBackdrop({
+      open: false,
+      render: null
     })
   }
 
@@ -64,15 +65,16 @@ export function BackdropProvider({
 BackdropProvider.propTypes = {
   children: PropTypes.element,
 
-  // zIndex of the backdrop surface. Unused if backdropSurface is
-  // overridden.
+  // zIndex of the backdrop surface. Unused if backdropSurface is overridden.
   zIndex: PropTypes.number,
 
   // If true, backdrop background is transparent.
   disableDarken: PropTypes.bool,
 
-  // A render function that overrides (takes the place of) the default
-  // darkened full-page div background.
+  // A render function that returns a Component that overrides (takes the
+  // place of) the default darkened div background.
+  //
+  // See /example/src/ExampleApp.jsx for proper use.
   backdropSurface: PropTypes.func
 }
 
