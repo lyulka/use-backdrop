@@ -61,14 +61,22 @@ export function BackdropProvider({
   )
 }
 
-BackdropContext.propTypes = {
+BackdropProvider.propTypes = {
   children: PropTypes.element,
-  disableDarken: PropTypes.bool,
+
+  // zIndex of the backdrop surface. Unused if backdropSurface is
+  // overridden.
   zIndex: PropTypes.number,
+
+  // If true, backdrop background is transparent.
+  disableDarken: PropTypes.bool,
+
+  // A render function that overrides (takes the place of) the default
+  // darkened full-page div background.
   backdropSurface: PropTypes.func
 }
 
-BackdropContext.defaultProps = {
+BackdropProvider.defaultProps = {
   children: null,
   disableBackdrop: false,
   zIndex: 10,

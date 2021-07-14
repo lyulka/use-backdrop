@@ -1,6 +1,6 @@
 {
   "name": "use-backdrop",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "React Hooks API for quickly displaying full-screen backdrops/overlays",
   "license": "MIT",
   "main": "dist/index.js",
